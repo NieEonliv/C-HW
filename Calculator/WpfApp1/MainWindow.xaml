@@ -1,0 +1,108 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Калькулятор" Height="450" Width="800">
+    <Grid Background="#7C07A9">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10" Background="#A767D5"/>
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="10" Background="#963FD5"/>
+        <TextBlock Foreground="#DDFFFFFF" x:Name="textResult" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="10" VerticalAlignment="Center" FontSize="30" Text="" Margin="20,0,20,0" />
+
+        <RadioButton Foreground="#DDFFFFFF" x:Name="grad" Grid.Row="1" Grid.Column="0" Content="Градусы" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Click="GradRadio_Click" Margin="5,0,0,0"/>
+        <RadioButton Foreground="#DDFFFFFF" x:Name="rad" Grid.Row="1" Grid.Column="1" Content="Радианы" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Click="RadRario_Click" Margin="5,0,0,0" IsChecked="True" Cursor=""/>
+
+        <Button Grid.Row="2" Grid.Column="0" Margin="10" Tag="sin" Content="sin" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="0" Margin="10" Tag="cos" Content="cos" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="0" Margin="10" Tag="tan" Content="tan" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="5" Grid.Column="0" Margin="10" Tag="sinh" Content="sinh" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="0" Margin="10" Tag="cosh" Content="cosh" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="7" Grid.Column="0" Margin="10" Tag="tanh" Content="tanh" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+
+        <Button Grid.Row="2" Grid.Column="1" Margin="10" Tag="asin" Content="sin⁻¹" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="1" Margin="10" Tag="acos" Content="cos⁻¹" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="1" Margin="10" Tag="atan" Content="tan⁻¹" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="5" Grid.Column="1" Margin="10" Tag="asinh" Content="sinh⁻¹" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="1" Margin="10" Tag="acosh" Content="cosh⁻¹" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="7" Grid.Column="1" Margin="10" Tag="atanh" Content="tanh⁻¹" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+
+        <Button Grid.Row="2" Grid.Column="2" Margin="10" Content="Pi" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="2" Margin="10" Content="eⁿ" Tag="exp" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="2" Margin="10" Content="ln" Tag="ln" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="5" Grid.Column="2" Margin="10" Content="log" Tag="log10" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="2" Margin="10" Content="logₐx" Tag="log" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="7" Grid.Column="2" Margin="10" Content="10ⁿ" Tag="10^" FontSize="25" Padding="-10,-10,-10,-5" Click="SignsButton_Click"/>
+
+        <Button Grid.Row="2" Grid.Column="3" Margin="10" Content="n!" Tag="fact" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="3" Margin="10" Content="x²" Tag="^2" FontSize="25" Padding="-10,-10,-10,-5" Click="SignsButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="3" Margin="10" Content="x³" Tag="^3" FontSize="25" Padding="-10,-10,-10,-5" Click="SignsButton_Click"/>
+        <Button Grid.Row="5" Grid.Column="3" Margin="10" Content="xⁿ" Tag="^" FontSize="25" Padding="-10,-10,-10,-5" Click="SignsButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="3" Margin="10" Content="√x" Tag="sqrt" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="7" Grid.Column="3" Margin="10" Content="ⁿ√x" Tag="root" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+
+        <Button Grid.Row="2" Grid.Column="5" Margin="10" Content="MC" FontSize="25" Padding="-10,-10,-10,-5" Click="MCButton_click"/>
+        <Button Grid.Row="3" Grid.Column="5" Margin="10" Content="(" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="5" Margin="10" Content="7" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="5" Grid.Column="5" Margin="10" Content="4" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="5" Margin="10" Content="1" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="7" Grid.Column="5" Margin="10" Content="0" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+                                                                              
+        <Button Grid.Row="2" Grid.Column="6" Margin="10" Content="MR" FontSize="25" Padding="-10,-10,-10,-5" Click="MRButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="6" Margin="10" Content="," FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="6" Margin="10" Content="8" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="5" Grid.Column="6" Margin="10" Content="5" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="6" Margin="10" Content="2" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="7" Grid.Column="6" Margin="10" Content="." FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+                                                                              
+        <Button Grid.Row="2" Grid.Column="7" Margin="10" Content="MS" FontSize="25" Padding="-10,-10,-10,-5" Click="MSButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="7" Margin="10" Content=")" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="7" Margin="10" Content="9" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="5" Grid.Column="7" Margin="10" Content="6" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="7" Margin="10" Content="3" FontSize="25" Padding="-10,-10,-10,-5" Click="StandardCharactersButton_Click"/>
+        <Button Grid.Row="7" Grid.Column="7" Margin="10" Content="+/-" FontSize="25" Padding="-10,-10,-10,-5" Click="ReplacePlusMinusButton_Click"/>
+
+        <Button Grid.Row="2" Grid.Column="8" Margin="10" Content="M+" FontSize="25" Padding="-10,-10,-10,-5" Click="MPlusButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="8" Margin="10" Content="←" FontSize="25" Padding="-10,-10,-10,-5" Click="EraseButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="8" Margin="10" Content="÷" Tag="/" FontSize="25" Padding="-10,-10,-10,-5" Click="SignsButton_Click"/>
+        <Button Grid.Row="5" Grid.Column="8" Margin="10" Content="×" Tag="*" FontSize="25" Padding="-10,-10,-10,-5" Click="SignsButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="8" Margin="10" Content="-" Tag="-" FontSize="25" Padding="-10,-10,-10,-5" Click="SignsButton_Click"/>
+        <Button Grid.Row="7" Grid.Column="8" Margin="10" Content="+" Tag="+" FontSize="25" Padding="-10,-10,-10,-5" Click="SignsButton_Click"/>
+
+        <Button Grid.Row="2" Grid.Column="9" Margin="10" Content="M-" FontSize="25" Padding="-10,-10,-10,-5" Click="MMuinusButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="9" Margin="10" Content="AC" Background="PaleVioletRed" FontSize="25" Padding="-10,-10,-10,-5" Click="ClearButton_Click"/>
+        <Button Grid.Row="4" Grid.Column="9" Margin="10" Content="abs" Tag="abs" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="5" Grid.Column="9" Margin="10" Content="mod" Tag="mod" FontSize="25" Padding="-10,-10,-10,-5" Click="SpecialExpressionsButton_Click"/>
+        <Button Grid.Row="6" Grid.Column="9" Margin="10" Content="=" FontSize="25" Grid.RowSpan="2" Padding="-10,-10,-10,-5" Click="CalculateButton_Click" Height="90"/>
+
+        <TextBlock Foreground="#DDFFFFFF" Grid.Row="1" Grid.Column="5" FontSize="20" Text="Пямять:" VerticalAlignment="Center" HorizontalAlignment="Right" />
+        <TextBlock Foreground="#DDFFFFFF" Grid.Row="1" Grid.Column="6" FontSize="20" Grid.ColumnSpan="4" x:Name="memory" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"/>
+    </Grid>
+</Window>

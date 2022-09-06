@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "hZlFY4ZFEYSYdtCCeb0xmjabwfjNw0gweOzY6/ikbNn7z09o+msgW00nvNw5Q6I7YgGePN2CmDTi2qNapi5EKA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NieEo\\source\\repos\\Calculator\\WpfApp1\\WpfApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NieEo\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
+    "C:\\Users\\NieEo\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,53 @@
+﻿<Window x:Class="Orgonizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Orgonizer"
+        mc:Ignorable="d"      
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:col="clr-namespace:System.Collections;assembly=System.Collections.NonGeneric"
+        Title="Органайзер" MinHeight="450" Cursor="Hand" MinWidth="800" MaxHeight="450" MaxWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="175"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Background="#1F7C65"/>
+
+        <Button  Background="#FFAA00" BorderBrush="#FFFFAA00" Grid.Row="0" Grid.Column="0" Content="Организации" MinHeight="66" Margin="10,0,10,0" FontSize="18" HorizontalContentAlignment="Left" Click="ButtonOrganization_Click"/>
+        <Button Background="#FFAA00" BorderBrush="#FFFFAA00" Grid.Row="1" Grid.Column="0" Content="Телефоны" MinHeight="66" Margin="10,0,10,0" FontSize="18" HorizontalContentAlignment="Left" Click="ButtonPhone_Click"/>
+        <Button Background="#FFAA00" BorderBrush="#FFFFAA00" Grid.Row="2" Grid.Column="0" Content="Адресса" MinHeight="66" Margin="10,0,10,0" FontSize="18" HorizontalContentAlignment="Left" Click="ButtonAdress_Click"/>
+        <Button Background="#FFAA00" BorderBrush="#FFFFAA00" Grid.Row="3" Grid.Column="0" Content="Встречи" MinHeight="66" Margin="10,0,10,0" FontSize="18" HorizontalContentAlignment="Left" Click="ButtonMeeting_Click"/>
+        <Button Background="#FFAA00" BorderBrush="#FFFFAA00" Grid.Row="4" Grid.Column="0" Content="Люди" MinHeight="66" Margin="10,0,10,0" FontSize="18" HorizontalContentAlignment="Left" Click="ButtonPeople_Click"/>
+
+        <Border Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="6" Background="#006C51"/>
+
+        <TextBox x:Name="textBox" Background="#1F7C65" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" CaretBrush="#FF35D2AB" Foreground="White" SelectionBrush="#FF5FD2B5" BorderThickness="0,0,0,0" Style="{Binding Mode=OneWay}" Margin="15"/>
+
+        <Button Background="#35D2AB" BorderBrush="#35D2AB" Grid.Row="4" Grid.Column="4" Content="Добавить"  MinHeight="50" Margin="10,0,10,0" FontSize="11" Click="ButtonAdd_Click"/>
+        <Button Background="#35D2AB" BorderBrush="#35D2AB" Grid.Row="4" Grid.Column="5" Content="Удалить" MinHeight="50" Margin="10,0,10,0" FontSize="11" Click="ButtonRemove_Click"/>
+        <Button Background="#35D2AB" BorderBrush="#35D2AB" Grid.Row="4" Grid.Column="6" Content="Найти" MinHeight="50" Margin="10,0,10,0" FontSize="11" Click="ButtonSearh_Click"/>
+
+        <DataGrid SelectionUnit="FullRow" IsReadOnly="True" x:Name="listResorce" Background="#00A67C" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" Grid.ColumnSpan="6" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" EnableRowVirtualization="False" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date}" Width="160" />
+                <DataGridTextColumn Header="Информация" Binding="{Binding Data}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label x:Name="lableSelect" Grid.Row="0" Grid.Column="6" Content="Телефоны" HorizontalContentAlignment="Right"/>
+    </Grid>
+</Window>

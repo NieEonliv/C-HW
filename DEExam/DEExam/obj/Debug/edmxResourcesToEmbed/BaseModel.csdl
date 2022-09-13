@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="demExamModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountInPack" Type="Int32" Nullable="false" />
+    <Property Name="Unit" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountInStock" Type="Double" />
+    <Property Name="MinCount" Type="Double" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaterialTypeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MaterialType" Relationship="Self.FK_Material_MaterialType" FromRole="Material" ToRole="MaterialType" />
+    <NavigationProperty Name="Suppliers" Relationship="Self.MaterialSupplier" FromRole="Material" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="MaterialType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Materials" Relationship="Self.FK_Material_MaterialType" FromRole="MaterialType" ToRole="Material" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="QualityRating" Type="Int32" />
+    <Property Name="SupplierTypeID" Type="Int32" />
+    <NavigationProperty Name="SupplierType" Relationship="Self.FK_Supplier_SupplierType" FromRole="Supplier" ToRole="SupplierType" />
+    <NavigationProperty Name="Materials" Relationship="Self.MaterialSupplier" FromRole="Supplier" ToRole="Material" />
+  </EntityType>
+  <EntityType Name="SupplierType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Suppliers" Relationship="Self.FK_Supplier_SupplierType" FromRole="SupplierType" ToRole="Supplier" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Material_MaterialType">
+    <End Role="MaterialType" Type="Self.MaterialType" Multiplicity="1" />
+    <End Role="Material" Type="Self.Material" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MaterialType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Material">
+        <PropertyRef Name="MaterialTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplier_SupplierType">
+    <End Role="SupplierType" Type="Self.SupplierType" Multiplicity="0..1" />
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SupplierType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Supplier">
+        <PropertyRef Name="SupplierTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MaterialSupplier">
+    <End Role="Material" Type="Self.Material" Multiplicity="*" />
+    <End Role="Supplier" Type="Self.Supplier" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="demExamEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Materials" EntityType="Self.Material" />
+    <EntitySet Name="MaterialTypes" EntityType="Self.MaterialType" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="SupplierTypes" EntityType="Self.SupplierType" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Material_MaterialType" Association="Self.FK_Material_MaterialType">
+      <End Role="MaterialType" EntitySet="MaterialTypes" />
+      <End Role="Material" EntitySet="Materials" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplier_SupplierType" Association="Self.FK_Supplier_SupplierType">
+      <End Role="SupplierType" EntitySet="SupplierTypes" />
+      <End Role="Supplier" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="MaterialSupplier" Association="Self.MaterialSupplier">
+      <End Role="Material" EntitySet="Materials" />
+      <End Role="Supplier" EntitySet="Suppliers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,94 @@
+﻿<Page x:Class="DEExam.MaterialsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DEExam"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MaterialsPage">
+   
+    <Grid Background="White">
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBox Style="{StaticResource Placeholder}" Grid.Column="1" Grid.Row="1" Margin="5,0,5,0" Tag="Наименование" Cursor="Hand"/>
+
+                <ComboBox Grid.Column="2" Grid.Row="1">
+                    <TextBlock>Все типы</TextBlock>
+                </ComboBox>
+
+                <ComboBox Grid.Column="3" Grid.Row="1">
+                    <TextBlock>Без фильтров</TextBlock>
+                    <ComboBox>
+                        <TextBlock>По возрастанию</TextBlock>
+                        <TextBlock>наименование</TextBlock>
+                        <TextBlock>остаток на складе</TextBlock>
+                        <TextBlock> стоимость</TextBlock>
+                    </ComboBox>
+                    <ComboBox>
+                        <TextBlock>По убыванию</TextBlock>
+                        <TextBlock>наименование</TextBlock>
+                        <TextBlock>остаток на складе</TextBlock>
+                        <TextBlock> стоимость</TextBlock>
+                    </ComboBox>
+                </ComboBox>
+            </Grid>
+
+            <ScrollViewer Grid.Row="1">
+                <WrapPanel x:Name="wrap" HorizontalAlignment="Center" >
+                    
+                </WrapPanel>
+            </ScrollViewer>
+            <!--
+            <DataGrid Grid.Row="1" x:Name="materialsList" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Картинка">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Image}" Height="50" Margin="5"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Width="2*" Header="Тип материала" Binding="{Binding MaterialType.Title}" CanUserResize="False"/>
+                    <DataGridTextColumn Width="3*" Header="Название материала" Binding="{Binding Title}"/>
+                    <DataGridTextColumn Width="2.2*" Header="Минимальное кол-во" Binding="{Binding MinCount}"/>
+                    <DataGridTextColumn Width="5*" x:Name="suppliersDataGrid" Header="Поставщики" Binding="{Binding SuppliersNames}"/>
+                </DataGrid.Columns>
+            </DataGrid> 
+            -->
+
+            <Grid Grid.Row="2" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <UniformGrid Grid.Column="2" Columns="7" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                    <TextBlock Style="{StaticResource animationUnderLine}" Text="←" MouseLeftButtonDown="leftPage_Click"/>
+                    <TextBlock x:Name="firstBlock" Style="{StaticResource animationUnderLine}" Text="1" MouseLeftButtonDown="numberPage_Click"/>
+                    <TextBlock Style="{StaticResource animationUnderLine}" Text="2" MouseLeftButtonDown="numberPage_Click"/>
+                    <TextBlock Style="{StaticResource animationUnderLine}" Text="3" MouseLeftButtonDown="numberPage_Click"/>
+                    <TextBlock Style="{StaticResource animationUnderLine}" Text="4" MouseLeftButtonDown="numberPage_Click"/>
+                    <TextBlock Style="{StaticResource animationUnderLine}" Text="5" MouseLeftButtonDown="numberPage_Click"/>
+                    <TextBlock Style="{StaticResource animationUnderLine}" Text="→" MouseLeftButtonDown="RightPage_Click"/>
+                </UniformGrid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

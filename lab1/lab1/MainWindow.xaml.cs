@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -25,36 +26,66 @@ namespace lab1
         {
             InitializeComponent();
         }
-
-        private void GetResultButton_Click(object sender, RoutedEventArgs e)
+        private bool checkNullInput()
         {
-            BrushGraphick(double.Parse(startCoordinate.Text), double.Parse(endCoordinate.Text), double.Parse(stepCoordinate.Text));
-        }
-        private void BrushGraphick(double startCoordinate, double endCoordinate, double step)
-        {
-            double difference  = (endCoordinate - startCoordinate) + 1;
-            double tempCountOperations = difference / step;
-            int countOperations = (int)Math.Round(tempCountOperations, MidpointRounding.AwayFromZero);
-            double[] dataX = new double[countOperations];
-            double[] dataY = new double[countOperations];
-
-
-            for (int i = 0; i < countOperations; i++)
+            if (startCoordinate.Text == "" || endCoordinate.Text == "" || stepCoordinate.Text == "")
             {
-                dataX[i] = startCoordinate;
-                startCoordinate += step;
-
-                dataY[i] = CalculateFunction(dataX[i]);
+                MessageBox.Show("Введите коректрые данные");
+                return true;
             }
-            WpfPlot.Plot.AddScatter(dataX, dataY);
-            WpfPlot.Refresh();
+            else
+                return false;       
         }
-        private double CalculateFunction(double value)
+        private double[] BrushGraphikAndReturnDataY()
         {
-            double degreeValue = Math.Pow(value, 2);
-            double sqrtValue = Math.Sqrt(degreeValue);
-            return sqrtValue - 5;
+            List<double[]> coordinates = NumericalIntegration.GetGraphikCoordinate(double.Parse(startCoordinate.Text),
+                                                              double.Parse(endCoordinate.Text),
+                                                              double.Parse(stepCoordinate.Text));
+            WpfPlot.Plot.AddScatter(coordinates[0], coordinates[1]);
+            WpfPlot.Refresh();
+            return coordinates[1];
+        }
 
+        private void GetRectangleMethod_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkNullInput())
+                return;
+            double[] dataY = BrushGraphikAndReturnDataY();
+            resultCalculate.Text = "Ответ: " + NumericalIntegration.Rectangle(dataY, double.Parse(stepCoordinate.Text)).ToString();
+        }
+         
+       
+        private void TrapezoidMethod_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkNullInput())
+                return;
+            double[] dataY = BrushGraphikAndReturnDataY();
+            resultCalculate.Text = "Ответ: " + NumericalIntegration.Trapezoid(dataY, double.Parse(stepCoordinate.Text)).ToString();
+        }
+
+        private void SimpsonsMethod_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkNullInput())
+                return;
+            double[] dataY = BrushGraphikAndReturnDataY();
+            resultCalculate.Text = "Ответ: " + NumericalIntegration.Simpsons(dataY, double.Parse(stepCoordinate.Text)).ToString();
+        }
+
+        private void ChebyshevsMethod_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkNullInput())
+                return;
+            double[] dataY = BrushGraphikAndReturnDataY();
+            resultCalculate.Text = "Ответ: " + NumericalIntegration.Chebyshevs(dataY, double.Parse(stepCoordinate.Text),
+                                                                    double.Parse(startCoordinate.Text)).ToString();
+        }
+
+        private void GausMethod_Click(object sender, RoutedEventArgs e)
+        {
+            if (checkNullInput())
+                return;
+            BrushGraphikAndReturnDataY();
+            resultCalculate.Text = "Ответ: " + NumericalIntegration.GausMethod(double.Parse(startCoordinate.Text),double.Parse(endCoordinate.Text));
         }
     }
 }

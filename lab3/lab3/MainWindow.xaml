@@ -1,0 +1,40 @@
+﻿<Window x:Class="lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="InputText">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="8*"/>
+            </Grid.ColumnDefinitions>
+            <UniformGrid Columns="2">
+                <TextBlock Style="{StaticResource InputText}" Text="i="/>
+                <TextBox x:Name="iValue" Margin="0,10,0,10"/>
+            </UniformGrid>
+            <UniformGrid Grid.Column="1" Columns="2">
+                <TextBlock Style="{StaticResource InputText}" Text="j="/>
+                <TextBox x:Name="jValue" Margin="0,10,0,10"/>
+            </UniformGrid>
+            <Button Grid.Column="2" Margin="50,5,50,5" Content="Рассчитать арифметический квадрат" Click="GetElement_Clilk"/>
+        </Grid>
+        <TextBlock FontSize="100" Grid.Row="1" x:Name="result" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+    </Grid>
+</Window>

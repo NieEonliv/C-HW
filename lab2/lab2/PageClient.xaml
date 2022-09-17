@@ -9,7 +9,7 @@
       Title="PageClient">
 
     <Grid>
-        <DataGrid x:Name="table" Grid.Column="1" AutoGenerateColumns="False">
+        <DataGrid x:Name="table" IsReadOnly="True" Grid.Column="1" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"/>
                 <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"/>

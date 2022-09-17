@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Title="Калькулятор" Height="450" Width="800">
+        Title="Калькулятор" MinHeight="450" MinWidth="800" Icon="/1486504349-calculate-calculation-education-business-calculator-math_81324.png">
     <Grid Background="#7C07A9">
         
         <Grid.RowDefinitions>

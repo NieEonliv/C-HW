@@ -8,7 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="1486504349-calculate-calculation-education-business-calculator-math_81324.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="1486504349-calculate-calculation-education-business-calculator-math_81324.png" />
   </ItemGroup>
 
 </Project>

@@ -24,3 +24,29 @@ C:\Users\NieEo\source\repos\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\refint\
 C:\Users\NieEo\source\repos\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.pdb
 C:\Users\NieEo\source\repos\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.genruntimeconfig.cache
 C:\Users\NieEo\source\repos\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\ref\Orgonizer.dll
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\bin\Debug\net6.0-windows\Orgonizer.exe
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\bin\Debug\net6.0-windows\Orgonizer.deps.json
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\bin\Debug\net6.0-windows\Orgonizer.runtimeconfig.json
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\bin\Debug\net6.0-windows\Orgonizer.dll
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\bin\Debug\net6.0-windows\Orgonizer.pdb
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.csproj.AssemblyReference.cache
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer_MarkupCompile.cache
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer_MarkupCompile.lref
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\App.baml
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.g.resources
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.AssemblyInfoInputs.cache
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.AssemblyInfo.cs
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.csproj.CoreCompileInputs.cache
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.csproj.CopyComplete
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.dll
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\refint\Orgonizer.dll
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.pdb
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\Orgonizer.genruntimeconfig.cache
+C:\Users\NieEo\Desktop\Новая папка\Orgonizer\Orgonizer\obj\Debug\net6.0-windows\ref\Orgonizer.dll

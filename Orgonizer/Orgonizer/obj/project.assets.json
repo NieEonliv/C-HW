@@ -146,11 +146,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NieEo\\source\\repos\\Orgonizer\\Orgonizer\\Orgonizer.csproj",
+      "projectUniqueName": "C:\\Users\\NieEo\\Desktop\\Новая папка\\Orgonizer\\Orgonizer\\Orgonizer.csproj",
       "projectName": "Orgonizer",
-      "projectPath": "C:\\Users\\NieEo\\source\\repos\\Orgonizer\\Orgonizer\\Orgonizer.csproj",
+      "projectPath": "C:\\Users\\NieEo\\Desktop\\Новая папка\\Orgonizer\\Orgonizer\\Orgonizer.csproj",
       "packagesPath": "C:\\Users\\NieEo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NieEo\\source\\repos\\Orgonizer\\Orgonizer\\obj\\",
+      "outputPath": "C:\\Users\\NieEo\\Desktop\\Новая папка\\Orgonizer\\Orgonizer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\Microsoft Visual Studio\\Shared\\NuGetPackages"

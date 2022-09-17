@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mz05M44wUpWa64WMwnGs1oUDaPE43WITWMNkrpSfiONtsNyNtCLjmMYKyO72h9FLy4sfgybNhcSeE2U8meS1Ug==",
+  "dgSpecHash": "e+uMHlujvdKU8jQFD0Y18sQOpgbKoKN2ictERfuZVqFqLt8fwgp7IzJjOPDYtZRcfEMSpuOGUgSqeIBVXXuHuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\NieEo\\source\\repos\\Orgonizer\\Orgonizer\\Orgonizer.csproj",
+  "projectFilePath": "C:\\Users\\NieEo\\Desktop\\Новая папка\\Orgonizer\\Orgonizer\\Orgonizer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NieEo\\.nuget\\packages\\materialdesigncolors\\2.0.6\\materialdesigncolors.2.0.6.nupkg.sha512",
     "C:\\Users\\NieEo\\.nuget\\packages\\materialdesignthemes\\4.5.0\\materialdesignthemes.4.5.0.nupkg.sha512",

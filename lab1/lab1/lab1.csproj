@@ -148,5 +148,8 @@
   <ItemGroup>
     <Resource Include="Image\function.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\icons8-обратная-численная-сортировка-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

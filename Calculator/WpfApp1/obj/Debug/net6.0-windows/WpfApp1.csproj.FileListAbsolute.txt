@@ -48,3 +48,28 @@ C:\Users\NieEo\Documents\GitHub\C-HW\Calculator\WpfApp1\obj\Debug\net6.0-windows
 C:\Users\NieEo\Documents\GitHub\C-HW\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.pdb
 C:\Users\NieEo\Documents\GitHub\C-HW\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.genruntimeconfig.cache
 C:\Users\NieEo\Documents\GitHub\C-HW\Calculator\WpfApp1\obj\Debug\net6.0-windows\ref\WpfApp1.dll
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\bin\Debug\net6.0-windows\WpfApp1.exe
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\bin\Debug\net6.0-windows\WpfApp1.deps.json
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\bin\Debug\net6.0-windows\WpfApp1.runtimeconfig.json
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\bin\Debug\net6.0-windows\WpfApp1.dll
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\bin\Debug\net6.0-windows\WpfApp1.pdb
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\bin\Debug\net6.0-windows\MaterialDesignColors.dll
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\bin\Debug\net6.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1_MarkupCompile.cache
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1_MarkupCompile.lref
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\App.baml
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.g.resources
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.AssemblyInfoInputs.cache
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.AssemblyInfo.cs
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.csproj.CopyComplete
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.dll
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\refint\WpfApp1.dll
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.pdb
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\WpfApp1.genruntimeconfig.cache
+C:\Users\NieEo\Desktop\Новая папка\Calculator\WpfApp1\obj\Debug\net6.0-windows\ref\WpfApp1.dll

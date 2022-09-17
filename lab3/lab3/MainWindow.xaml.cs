@@ -35,7 +35,10 @@ namespace lab3
         private void GetElement_Clilk(object sender, RoutedEventArgs e)
         {
             if (!int.TryParse(iValue.Text , out int resi) || !int.TryParse(jValue.Text, out int resj))
-                return;           
+            {
+                return;
+                MessageBox.Show("Ввод был некоректен");
+            }
             result.Text = GetElement(resi, resj).ToString();
         }
     }

@@ -9,7 +9,7 @@
       Title="PageBook">
 
     <Grid>
-        <DataGrid x:Name="table" Grid.Column="1" AutoGenerateColumns="False">
+        <DataGrid x:Name="table" IsReadOnly="True" Grid.Column="1" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Title}"/>
                 <DataGridTextColumn Header="Автор" Binding="{Binding Author}"/>

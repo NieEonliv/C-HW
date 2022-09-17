@@ -37,3 +37,42 @@ C:\Users\NieEo\source\repos\lab2\lab2\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\NieEo\source\repos\lab2\lab2\bin\Debug\System.ValueTuple.xml
 C:\Users\NieEo\source\repos\lab2\lab2\obj\Debug\PageSelectionOfBooks.g.cs
 C:\Users\NieEo\source\repos\lab2\lab2\obj\Debug\PageSelectionOfBooks.baml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\lab2.exe.config
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\lab2.exe
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\lab2.pdb
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\EntityFramework.dll
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\ScottPlot.dll
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\ScottPlot.WPF.dll
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\System.Drawing.Common.dll
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\System.ValueTuple.dll
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\EntityFramework.xml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\ScottPlot.xml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\System.ValueTuple.xml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2.csproj.AssemblyReference.cache
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2.csproj.SuggestedBindingRedirects.cache
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\MainWindow.g.cs
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\PageAnalys.g.cs
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\PageBook.g.cs
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\PageClient.g.cs
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\PageSelectionOfBooks.g.cs
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\App.g.cs
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2_Content.g.cs
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2_MarkupCompile.cache
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2_MarkupCompile.lref
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\MainWindow.baml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\PageAnalys.baml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\PageBook.baml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\PageClient.baml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\PageSelectionOfBooks.baml
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2.g.resources
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2.Properties.Resources.resources
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2.csproj.GenerateResource.cache
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2.csproj.CopyComplete
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2.exe
+C:\Users\NieEo\Desktop\Новая папка\lab2\lab2\obj\Debug\lab2.pdb

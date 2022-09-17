@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
-        Title="MainWindow" MaxHeight="450" Width="800">
+        Title="ЧернокнижникПС" MaxHeight="450" MinWidth="500" Icon="/warlock-eye_39446.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*"/>

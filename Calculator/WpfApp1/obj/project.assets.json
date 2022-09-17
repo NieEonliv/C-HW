@@ -105,11 +105,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NieEo\\Documents\\GitHub\\C-HW\\Calculator\\WpfApp1\\WpfApp1.csproj",
+      "projectUniqueName": "C:\\Users\\NieEo\\Desktop\\Новая папка\\Calculator\\WpfApp1\\WpfApp1.csproj",
       "projectName": "WpfApp1",
-      "projectPath": "C:\\Users\\NieEo\\Documents\\GitHub\\C-HW\\Calculator\\WpfApp1\\WpfApp1.csproj",
+      "projectPath": "C:\\Users\\NieEo\\Desktop\\Новая папка\\Calculator\\WpfApp1\\WpfApp1.csproj",
       "packagesPath": "C:\\Users\\NieEo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NieEo\\Documents\\GitHub\\C-HW\\Calculator\\WpfApp1\\obj\\",
+      "outputPath": "C:\\Users\\NieEo\\Desktop\\Новая папка\\Calculator\\WpfApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\Microsoft Visual Studio\\Shared\\NuGetPackages"

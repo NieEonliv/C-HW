@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Квадрат арифметика" MinHeight="450" MinWidth="800" Icon="/8number_8_3073.png">
     <Window.Resources>
         <Style TargetType="TextBlock" x:Key="InputText">
             <Setter Property="HorizontalAlignment" Value="Right"/>

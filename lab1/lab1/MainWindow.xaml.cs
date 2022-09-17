@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -33,6 +34,20 @@ namespace lab1
                 MessageBox.Show("Введите коректрые данные");
                 return true;
             }
+            else if(startCoordinate.Text.Contains(".") || endCoordinate.Text.Contains(".") || stepCoordinate.Text.Contains("."))
+            {
+                startCoordinate.Text = startCoordinate.Text.Replace('.', ',');
+                endCoordinate.Text = endCoordinate.Text.Replace('.', ',');
+                stepCoordinate.Text = stepCoordinate.Text.Replace('.', ',');
+                return false;
+            }
+            else if(Regex.IsMatch(startCoordinate.Text, "[A-z]|[А-я]") ||
+                Regex.IsMatch(endCoordinate.Text, "[A-z]|[А-я]") ||
+                Regex.IsMatch(stepCoordinate.Text, "[A-z]|[А-я]"))
+            {
+                MessageBox.Show("Введите коректрые данные");
+                return true;
+            }
             else
                 return false;       
         }
@@ -49,7 +64,7 @@ namespace lab1
         private void GetRectangleMethod_Click(object sender, RoutedEventArgs e)
         {
             if (checkNullInput())
-                return;
+                return;        
             double[] dataY = BrushGraphikAndReturnDataY();
             resultCalculate.Text = "Ответ: " + NumericalIntegration.Rectangle(dataY, double.Parse(stepCoordinate.Text)).ToString();
         }

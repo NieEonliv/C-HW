@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab7"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Арифметическое дерево" MinHeight="450" MinWidth="800" Icon="/MacFamilyTree_30181.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>

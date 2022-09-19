@@ -39,6 +39,13 @@ namespace lab7
                     return i;
                 if (Expasion[i] == '-' && bed == 0)
                     return i;
+            }
+            for (int i = 0; i < Expasion.Length; i++)
+            {
+                if (Expasion[i] == '(')
+                    bed += 1;
+                if (Expasion[i] == ')')
+                    bed -= 1;
                 if (Expasion[i] == '*' && bed == 0)
                     return i;
                 if (Expasion[i] == ':' && bed == 0)

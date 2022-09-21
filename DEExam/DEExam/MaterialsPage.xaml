@@ -21,6 +21,7 @@
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="0.5*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -28,65 +29,44 @@
                     <RowDefinition Height="3*"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <TextBox Style="{StaticResource Placeholder}" Grid.Column="1" Grid.Row="1" Margin="5,0,5,0" Tag="Наименование" Cursor="Hand"/>
+                <TextBox x:Name="sher" Style="{StaticResource Placeholder}" Grid.Column="1" Grid.Row="1" Margin="5,0,5,0" Tag="Наименование" Cursor="Hand" TextChanged="Sherch"/>
 
-                <ComboBox Grid.Column="2" Grid.Row="1">
-                    <TextBlock>Все типы</TextBlock>
+                <ComboBox x:Name="sortUpDown" Grid.Column="2" Grid.Row="1" SelectionChanged="sortUpDown_SelectionChanged">
+                    <TextBlock>Без сортировки</TextBlock>
+                    <TextBlock>По возрастанию</TextBlock>
+                    <TextBlock>По убыванию</TextBlock>
                 </ComboBox>
 
-                <ComboBox Grid.Column="3" Grid.Row="1">
+                <ComboBox x:Name="sortOn" Grid.Column="3" Grid.Row="1" SelectedIndex="0" SelectionChanged="sortOn_SelectionChanged">
                     <TextBlock>Без фильтров</TextBlock>
-                    <ComboBox>
-                        <TextBlock>По возрастанию</TextBlock>
-                        <TextBlock>наименование</TextBlock>
-                        <TextBlock>остаток на складе</TextBlock>
-                        <TextBlock> стоимость</TextBlock>
-                    </ComboBox>
-                    <ComboBox>
-                        <TextBlock>По убыванию</TextBlock>
-                        <TextBlock>наименование</TextBlock>
-                        <TextBlock>остаток на складе</TextBlock>
-                        <TextBlock> стоимость</TextBlock>
-                    </ComboBox>
+                    <TextBlock>Название</TextBlock>
+                    <TextBlock>Остаток на складе</TextBlock>
+                    <TextBlock>Стоимость</TextBlock>
                 </ComboBox>
+
+                <ComboBox x:Name="sortType" Grid.Column="4" Grid.Row="1" SelectionChanged="sortType_SelectionChanged"/>
             </Grid>
 
             <ScrollViewer Grid.Row="1">
-                <WrapPanel x:Name="wrap" HorizontalAlignment="Center" >
-                    
-                </WrapPanel>
+                <WrapPanel x:Name="wrap" HorizontalAlignment="Center"/>
             </ScrollViewer>
-            <!--
-            <DataGrid Grid.Row="1" x:Name="materialsList" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTemplateColumn Header="Картинка">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Image Source="{Binding Image}" Height="50" Margin="5"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTextColumn Width="2*" Header="Тип материала" Binding="{Binding MaterialType.Title}" CanUserResize="False"/>
-                    <DataGridTextColumn Width="3*" Header="Название материала" Binding="{Binding Title}"/>
-                    <DataGridTextColumn Width="2.2*" Header="Минимальное кол-во" Binding="{Binding MinCount}"/>
-                    <DataGridTextColumn Width="5*" x:Name="suppliersDataGrid" Header="Поставщики" Binding="{Binding SuppliersNames}"/>
-                </DataGrid.Columns>
-            </DataGrid> 
-            -->
 
             <Grid Grid.Row="2" Grid.Column="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <UniformGrid Grid.Column="2" Columns="7" VerticalAlignment="Center" HorizontalAlignment="Left" >
-                    <TextBlock Style="{StaticResource animationUnderLine}" Text="←" MouseLeftButtonDown="leftPage_Click"/>
+
+                <TextBlock x:Name="searchCount" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Center"/>
+
+                <UniformGrid x:Name="litsten" Initialized="litsten_Initialized" Grid.Column="2" Columns="7" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                    <TextBlock Style="{StaticResource animationUnderLine}" Text="←" Tag="slide" MouseLeftButtonDown="leftPage_Click"/>
                     <TextBlock x:Name="firstBlock" Style="{StaticResource animationUnderLine}" Text="1" MouseLeftButtonDown="numberPage_Click"/>
                     <TextBlock Style="{StaticResource animationUnderLine}" Text="2" MouseLeftButtonDown="numberPage_Click"/>
                     <TextBlock Style="{StaticResource animationUnderLine}" Text="3" MouseLeftButtonDown="numberPage_Click"/>
                     <TextBlock Style="{StaticResource animationUnderLine}" Text="4" MouseLeftButtonDown="numberPage_Click"/>
                     <TextBlock Style="{StaticResource animationUnderLine}" Text="5" MouseLeftButtonDown="numberPage_Click"/>
-                    <TextBlock Style="{StaticResource animationUnderLine}" Text="→" MouseLeftButtonDown="RightPage_Click"/>
+                    <TextBlock Style="{StaticResource animationUnderLine}" Text="→" Tag="slide" MouseLeftButtonDown="RightPage_Click"/>
                 </UniformGrid>
             </Grid>
         </Grid>

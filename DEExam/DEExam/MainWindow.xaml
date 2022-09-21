@@ -31,14 +31,14 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="0" Content="Материалы"/>
-                    <Button Grid.Row="1" Content="Добавление"/>
-                    <Button Grid.Row="2" Content="Поставщики"/>
+                    <Button Grid.Row="0" Content="Материалы" Click="MaterialShow_Click"/>
+                    <Button Grid.Row="1" Content="Добавление" Click="AddFormOpen_Click"/>
+                    <Button Grid.Row="2" Content="Поставщики" Click="SuplaersShow_Click"/>
                 </Grid>
             </Grid>
         </Grid>
 
-        <Frame Grid.Column="1" x:Name="mainFrame"/>
+        <Frame Grid.Column="1" x:Name="mainFrame" NavigationUIVisibility="Hidden" />
 
     </Grid>
 </Window>

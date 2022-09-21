@@ -8,6 +8,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using System.Windows;
 using System.Reflection;
+using System.Runtime.Remoting.Messaging;
 
 namespace DEExam
 {
@@ -15,6 +16,8 @@ namespace DEExam
     {
         private const int LIMITED_ITEMS_PAGE = 15;
         private static List<Material> materials;
+        public static List<TextBlock> Listens;
+
         public static List<Material> Materials 
         {
             get { return materials; }
@@ -25,103 +28,108 @@ namespace DEExam
                 maxPage = (int)Math.Round(temp,MidpointRounding.AwayFromZero);
             }
         }
-        public static int currentPage = 2;
+        public static int currentPage = 1;
         public static int maxPage;
 
+        public static void NumberPage(string block)
+        {
+            foreach (TextBlock item in Listens)
+            {
+                if (item.Text == block)
+                    item.TextDecorations = TextDecorations.Underline;
+                else
+                    item.TextDecorations = null;
+            }
+            currentPage = int.Parse(block);
+        }
+        public static void leftPage()
+        {
+            if (currentPage == 1)
+                return;
+            currentPage -= 1;
+            UnderlineChekc(true);
+        }
+        public static void RightPage()
+        {
+            if (maxPage < currentPage + 1)
+                return;
+            currentPage += 1;
+            UnderlineChekc(false);
+        }
+           
+        private static void UnderlineChekc(bool left)
+        {
+            for (int i = 0; i < Listens.Count; i++)
+            {
+                if (Listens[i].TextDecorations == TextDecorations.Underline)
+                {
+                    Listens[i].TextDecorations = null;
+                    if (left)
+                    {
+                        if (int.Parse(Listens[0].Text) > 1)
+                        {
+                            MoveListens(left);
+                            Listens[i].TextDecorations = TextDecorations.Underline;
+                            break;
+                        }
+                        if (i - 1 < 0)
+                            break;
+                        MoveListens(left);
+                        Listens[i - 1].TextDecorations = TextDecorations.Underline;
+                        break;
+                    }
+                    else
+                    {
+                        if (int.Parse(Listens[Listens.Count - 1].Text) != maxPage)
+                        {
+                            MoveListens(left);
+                            Listens[i].TextDecorations = TextDecorations.Underline;
+                            break;
+                        }
+                        if (i + 1 >= Listens.Count)
+                            break;
 
-        public static List<Border> CreateItems()
+                        MoveListens(left);
+                        Listens[i + 1].TextDecorations = TextDecorations.Underline;
+                        break;
+                    }
+                }
+            }           
+        }
+
+        private static void MoveListens(bool left)
+        {
+            if (left)
+            {
+                foreach (var item in Listens)
+                {
+                    if (item.Text != "1")
+                        item.Text = (int.Parse(item.Text) - 1).ToString();
+                    else
+                        break;
+                }
+            }
+            else
+            {
+                foreach (var item in Listens)
+                {
+                    if (Listens[Listens.Count - 1].Text != maxPage.ToString())
+                        item.Text = (int.Parse(item.Text) + 1).ToString();
+                    else
+                        break;
+                }
+            }          
+        }
+
+        public static List<PanelInfo> CreateItems()
         {
             int endIndex = currentPage * LIMITED_ITEMS_PAGE;
             int startIndex = (currentPage - 1) * LIMITED_ITEMS_PAGE;
 
-            List<Border> borderList = new List<Border>();
+            List<PanelInfo> panelInfoList = new List<PanelInfo>();
             for (int i = startIndex; i < endIndex && i < materials.Count; i++)
-            {
-                Grid grid = new Grid();
-                grid.Margin = new Thickness(10);
-
-                grid.RowDefinitions.Add(new RowDefinition());
-                grid.RowDefinitions.Add(new RowDefinition());
-                grid.RowDefinitions.Add(new RowDefinition());
-                grid.RowDefinitions.Add(new RowDefinition());
-
-                grid.RowDefinitions[0].Height = new GridLength(35);
-                grid.RowDefinitions[1].Height = new GridLength(35);
-                grid.RowDefinitions[2].Height = new GridLength(35);
-                grid.RowDefinitions[3].Height = new GridLength(35);
-
-                var cb = new BrushConverter();
-
-                Border border = new Border
-                {
-                    Width = 750,
-                    BorderThickness = new Thickness(2),
-                    BorderBrush = (Brush)cb.ConvertFrom("#FFC1C1"),
-                    CornerRadius = new CornerRadius(20, 20, 20, 20),
-                    Margin = new Thickness(15)
-                };
-
-                TextBlock nText = new TextBlock
-                {
-                    FontFamily = new FontFamily("Verdana"),
-                    Foreground = (Brush)cb.ConvertFrom("#1b1464"),
-                    Margin = new Thickness(180, 0, 0, 0),
-                    FontSize = 16,
-                    Text = "Название товара: " + materials[i].Title + "\n"
-                };
-
-                TextBlock cgText = new TextBlock
-                {
-                    FontFamily = new FontFamily("Verdana"),
-                    Foreground = (Brush)cb.ConvertFrom("#1b1464"),
-                    FontSize = 16,
-                    Margin = new Thickness(180, 0, 0, 0),
-                    Text = "Категория: " + materials[i].MaterialType.Title + "\n"
-                };
-
-                TextBlock prText = new TextBlock
-                {
-                    FontFamily = new FontFamily("Verdana"),
-                    Foreground = (Brush)cb.ConvertFrom("#1b1464"),
-                    FontSize = 16,
-                    Margin = new Thickness(180, 0, 0, 0),
-                    Text = "Стоимость : " + materials[i].Cost + "\n"
-                };
-
-                TextBlock posText = new TextBlock
-                {
-                    FontFamily = new FontFamily("Verdana"),
-                    Foreground = (Brush)cb.ConvertFrom("#1b1464"),
-                    FontSize = 16,
-                    Margin = new Thickness(180, 0, 0, 0),
-                    Text = "Поставщик : " + materials[i].SuppliersNames + "\n"
-                };
-
-                Image image = new Image();
-                image.Source = new BitmapImage(new Uri($"{materials[i].Image}", UriKind.Relative));
-                image.Width = 110;
-                image.Height = 110;
-                image.Margin = new Thickness(10, 20, 0, 0);
-                image.HorizontalAlignment = HorizontalAlignment.Left;
-                image.VerticalAlignment = VerticalAlignment.Center;
-
-                Grid.SetRowSpan(image, 3);
-                grid.Children.Add(image);
-
-                Grid.SetRow(nText, 0);
-                grid.Children.Add(nText);
-                Grid.SetRow(cgText, 1);
-                grid.Children.Add(cgText);
-                Grid.SetRow(prText, 2);
-                grid.Children.Add(prText);
-                Grid.SetRow(posText, 3);
-                grid.Children.Add(posText);
-
-                border.Child = grid;
-
-                borderList.Add(border);
-            }
-            return borderList;
+                panelInfoList.Add(new PanelInfo() { DataContext = materials[i] });
+            return panelInfoList;
         }
     }
 }

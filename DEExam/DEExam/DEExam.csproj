@@ -79,6 +79,12 @@
     <Compile Include="MaterialType.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PageRedactorMaterial.xaml.cs">
+      <DependentUpon>PageRedactorMaterial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PanelInfo.xaml.cs">
+      <DependentUpon>PanelInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Supplier.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
@@ -115,6 +121,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MaterialsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageRedactorMaterial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PanelInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

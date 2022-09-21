@@ -26,5 +26,20 @@ namespace DEExam
             InitializeComponent();
             mainFrame.Navigate(new MaterialsPage());
         }
+
+        private void AddFormOpen_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new PageRedactorMaterial());
+        }
+
+        private void MaterialShow_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(new MaterialsPage());
+        }
+
+        private void SuplaersShow_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

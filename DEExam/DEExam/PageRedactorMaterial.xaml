@@ -1,0 +1,39 @@
+﻿<Page x:Class="DEExam.PageRedactorMaterial"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DEExam"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageRedactorMaterial">
+
+    <Grid Background="White">
+        <UniformGrid Rows="10">
+            <TextBox Style="{StaticResource Placeholder}" Tag="наименование" x:Name="Title"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ComboBox x:Name="supliers" HorizontalContentAlignment="Left" Foreground="Gray" FontSize="15" Background="White" Margin="0,0,0,0" Padding="10,3,5,3"/>
+                <Button Content="Добавить" Style="{StaticResource Def}" Grid.Column="1" FontSize="15" Foreground="Gray"/>
+            </Grid>
+            <TextBox Style="{StaticResource Placeholder}" Tag="количество на складе" x:Name="CountInStock"/>
+            <TextBox Style="{StaticResource Placeholder}" Tag="единица измерения" x:Name="Unit"/>
+            <TextBox Style="{StaticResource Placeholder}" Tag="количество в упаковке" x:Name="CountInPack"/>
+            <TextBox Style="{StaticResource Placeholder}" Tag="минимальное количество" x:Name="MinCount"/>
+            <TextBox Style="{StaticResource Placeholder}" Tag="стоимость за единицу" x:Name="Cost"/>
+            <Button Style="{StaticResource Def}" Click="AddImage_Click" FontSize="15" Background="White" Content="Изображение" HorizontalContentAlignment="Left" Padding="10,1,1,1" Foreground="Gray"/>
+            <TextBox Style="{StaticResource Placeholder}" Tag="подробное описание" x:Name="Description"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="100*"/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Удалить" />
+                <Button Content="Сохранить"  Grid.Column="1"/>
+            </Grid>
+        </UniformGrid>
+    </Grid>
+</Page>
